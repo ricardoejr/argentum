@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
-import br.com.caelum.argentum.Candlestick;
-import br.com.caelum.argentum.CandlestickFactory;
+import br.com.caelum.argentum.Candle;
+import br.com.caelum.argentum.CandleFactory;
 import br.com.caelum.argentum.Negociacao;
 
 public class TestaCandlestickFactoryOrdemCrescente {
@@ -20,8 +20,8 @@ public class TestaCandlestickFactoryOrdemCrescente {
 		Negociacao negociacao4 = new Negociacao(53.3, 100, hoje);
 		List<Negociacao> negociacoes = Arrays.asList(negociacao1, negociacao2, negociacao3, negociacao4);
 		
-		CandlestickFactory fabrica = new CandlestickFactory();
-		Candlestick candle = fabrica.constroiCandleParaData(hoje, negociacoes);
+		CandleFactory fabrica = new CandleFactory();
+		Candle candle = fabrica.constroiCandleParaData(hoje, negociacoes);
 		
 		System.out.println(candle);
 		
